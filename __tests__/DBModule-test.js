@@ -1,6 +1,6 @@
 import DBModule from '../DBModule';
 
-describe('Test DB Operations ' ,() => {
+describe('#TS#Platform## DB Modules test' ,() => {
 
     test('Should return no DBs',(done) => {
         var x = DBModule.listAllCouchDBs(function(e){
