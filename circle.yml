@@ -1,0 +1,9 @@
+machine:
+  services:
+    - couchdb
+  node:
+    version: 8.5.0
+
+dependencies:
+  post:
+   - __tests__/wait-for-couch.sh
