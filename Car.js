@@ -1,7 +1,8 @@
 
 export default class Car {
     
-    constructor(brand,model,year){
+    constructor(id,brand,model,year){
+        this.id = id;
         this.brand = brand;
         this.model = model;
         this.year = year; 
@@ -29,6 +30,15 @@ export default class Car {
 
     set year(year){
         this.year = year;
+    }
+
+    get carObject(){
+        return {
+            id : this.id,
+            brand : this.brand,
+            model : this.model,
+            year : this.year
+        }
     }
     
 }
