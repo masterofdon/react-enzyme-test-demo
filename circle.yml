@@ -12,4 +12,4 @@ machine:
 
 dependencies:
   post:
-    - __tests__/wait-for-couch.sh
+    - sh __tests__/wait-for-couch.sh
