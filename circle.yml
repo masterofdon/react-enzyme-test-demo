@@ -2,15 +2,6 @@
 #
 # Check https://circleci.com/docs/2.0/language-javascript/ for more details
 #
-machine:
-    services:
-      - couchdb
-    node:
-      version: 8.5.0
-
-dependencies:
-  post:
-    - __tests__/wait-for-couch.sh
 version: 2
 jobs:
   build:
@@ -44,3 +35,12 @@ jobs:
         
       # run tests!
       - run: yarn test
+machine:
+  services:
+    - couchdb
+  node:
+    version: 8.5.0
+
+dependencies:
+  post:
+    - __tests__/wait-for-couch.sh
