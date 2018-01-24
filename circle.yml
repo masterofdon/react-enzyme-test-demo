@@ -8,9 +8,9 @@ machine:
     node:
       version: 8.5.0
 
-  dependencies:
-    post:
-    - __tests__/wait-for-couch.sh
+    dependencies:
+      post:
+        - __tests__/wait-for-couch.sh
 version: 2
 jobs:
   build:
