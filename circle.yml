@@ -2,9 +2,7 @@
 #
 # Check https://circleci.com/docs/2.0/language-javascript/ for more details
 #
-version: 2
-jobs:
-  machine:
+machine:
     services:
       - couchdb
     node:
@@ -13,6 +11,8 @@ jobs:
   dependencies:
     post:
     - __tests__/wait-for-couch.sh
+version: 2
+jobs:
   build:
     docker:
       # specify the version you desire here
