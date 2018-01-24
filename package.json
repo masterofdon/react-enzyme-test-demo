@@ -4,7 +4,7 @@
   "description": "A Demo App with Enzyme DOM Testing for React App",
   "main": "index.js",
   "scripts": {
-    "test": "jest --verbose --colors -t #ViewTest#"
+    "test": "jest --verbose --colors"
   },
   "repository": {
     "type": "git",

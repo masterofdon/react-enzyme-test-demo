@@ -1,6 +1,6 @@
 import DBModule from '../DBModule';
 
-describe('#TS#Platform## DB Modules test' ,() => {
+describe.skip('#TS#Platform## DB Modules test' ,() => {
 
     test('Should return no DBs',(done) => {
         var x = DBModule.listAllCouchDBs(function(e){
@@ -10,7 +10,7 @@ describe('#TS#Platform## DB Modules test' ,() => {
         });
     });
 
-    describe("Should CouchDB Create DB, List the created and Drop successfully", () => {
+    describe.skip("Should CouchDB Create DB, List the created and Drop successfully", () => {
         test('Should successfully create CouchDB' , (done) => {
             DBModule.createCouchDB('test_db',function(e){
                 expect(e).toBe('success');
@@ -33,10 +33,9 @@ describe('#TS#Platform## DB Modules test' ,() => {
         });
     });
 
-    describe("Should CouchDB insert documents", () => {
+    describe.skip("Should CouchDB insert documents", () => {
         beforeAll(() => {
             return DBModule.createCouchDB('cars_db').then(()=> {
-                console.log("Successfully Created cars_db");
             }, err => {
                 console(err);
             });
@@ -74,7 +73,6 @@ describe('#TS#Platform## DB Modules test' ,() => {
         });
         afterAll(() => {
             DBModule.dropCouchDB('cars_db').then(()=>{
-                console.log("Successfully Dropped cars_db");
             }, err => {
                 console.error(err);
             })
